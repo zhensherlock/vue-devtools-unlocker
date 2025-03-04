@@ -14,22 +14,7 @@
 // Log `title` of current active web page
 import { injectScriptFile } from '@/utils';
 
-const pageTitle: string =
-  document.head.getElementsByTagName('title')[0].innerHTML;
-console.log(
-  `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
-);
 injectScriptFile('injectedScript.js');
-// setTimeout(() => {
-//   // @ts-ignore
-//   console.log(document.querySelector('.__qfk-login-btn.login-btn')['__vue__'])
-//   getVueInstanceWithRetry(2).then(res => {
-//     console.log(res);
-//   })
-// }, 5000)
-// getVueInstanceWithRetry(2).then(res => {
-//   console.log(res);
-// })
 
 // Communicate with background file by sending a message
 chrome.runtime.sendMessage(

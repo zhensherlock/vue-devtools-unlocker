@@ -1,12 +1,14 @@
-import { getVueInstanceWithRetry, unlock } from '@/utils';
+import { getVueInstanceWithRetry, unlockVueDevTools } from '@/utils';
 
-if (!window.__VUE_DEVTOOLS_GLOBAL_HOOK__) {
-  console.log('未安装Vue DevTools');
+const devtools = window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+if (devtools) {
+  const version = window.__VUE__ ? 3 : 2;
+
+  getVueInstanceWithRetry(version).then((res) => {
+    if (res) {
+      unlockVueDevTools(devtools, version, res);
+    }
+  });
+} else {
+  console.warn('Vue DevTools not found.');
 }
-
-const version = window.__VUE__ ? 3 : 2
-
-getVueInstanceWithRetry(version).then(res => {
-  console.log(res);
-  unlock(version, res);
-})
