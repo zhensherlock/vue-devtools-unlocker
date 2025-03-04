@@ -7,18 +7,24 @@
     "build": "webpack --mode=production --config config/webpack.config.js",
     "pack": "node pack.js",
     "repack": "npm run build && npm run pack",
-    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\""
+    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\"",
+    "lint": "eslint --ext .ts,.js src/ config/",
+    "lint:fix": "eslint --ext .ts,.js src/ config/ --fix"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.181",
+    "@types/chrome": "^0.0.307",
+    "@typescript-eslint/parser": "^8.26.0",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.11.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-prettier": "^5.2.3",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "prettier": "^2.8.8",
+    "prettier": "^3.5.3",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0",
     "webpack": "^5.98.0",
     "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.10.0"
