@@ -1,11 +1,13 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> My Extension
+# <img src="public/icons/icon_48.png" width="45" align="left"> Vue DevTools Unlocker
 
-My Chrome Extension
+A Chrome Extension that enables Vue DevTools in production environments.
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Unlocks Vue DevTools in production environments
+- Works with both Vue 2 and Vue 3
+- Shows Vue version information
+- Simple and lightweight
 
 ## Install
 
@@ -13,9 +15,4 @@ My Chrome Extension
 
 ## Contribution
 
-Suggestions and pull requests are welcomed!.
-
----
-
-This project was bootstrapped with [Chrome Extension CLI](https://github.com/dutiyesh/chrome-extension-cli)
-
+Suggestions and pull requests are welcomed!
