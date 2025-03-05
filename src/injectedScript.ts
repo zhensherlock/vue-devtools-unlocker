@@ -1,14 +1,36 @@
 import { getVueInstanceWithRetry, unlockVueDevTools } from '@/utils';
 
 const devtools = window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+const postMessageToExtension = (type: string = 'VueDevtoolsMessage', payload: unknown) => {
+  window.postMessage({
+    source: 'vue-devtools-unlocker',
+    type,
+    payload,
+  }, '*');
+};
+
 if (devtools) {
   const version = window.__VUE__ ? 3 : 2;
 
-  getVueInstanceWithRetry(version).then((res) => {
-    if (res) {
-      unlockVueDevTools(devtools, version, res);
+  getVueInstanceWithRetry(version).then((instance) => {
+    if (instance) {
+      const { vueVersion } = unlockVueDevTools(devtools, version, instance);
+      postMessageToExtension('VueDevtoolsStatus', {
+        success: true,
+        message: 'Vue DevTools unlocked successfully.',
+        vueVersion,
+      });
+    } else {
+      postMessageToExtension('VueDevtoolsStatus', {
+        success: false,
+        message: 'Vue instance not found.',
+      });
     }
   });
 } else {
-  console.warn('Vue DevTools not found.');
+  postMessageToExtension('VueDevtoolsStatus', {
+    success: false,
+    message: 'Vue DevTools not found.'
+  });
 }

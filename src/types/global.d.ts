@@ -10,6 +10,7 @@ interface VueDevtoolsHook {
 
 interface Vue2Instance {
   super?: Vue2Instance;
+  version: string;
   config: {
     devtools: boolean;
   };

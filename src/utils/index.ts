@@ -28,17 +28,16 @@ export const getVueInstanceWithRetry = async (
     }
   }
 
-  console.warn('Max retries reached. Vue instance not found.');
   return undefined;
 };
 
-export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vue: unknown) => {
+export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vueInstance: VueInstance) => {
+  let vueVersion: string;
   if (version === 3) {
     // Vue 3
+    vueVersion = vueInstance.version
     devtools.enabled = true;
-    const vue3Instance = vue as Vue3Instance;
-    const vue3Version = vue3Instance.version;
-    devtools.emit('app:init', vue3Instance, vue3Version, {
+    devtools.emit('app:init', vueInstance, vueVersion, {
       Fragment: Symbol.for('v-fgt'),
       Text: Symbol.for('v-txt'),
       Comment: Symbol.for('v-cmt'),
@@ -46,11 +45,15 @@ export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vu
     });
   } else {
     // Vue 2
-    let vue2Constructor = Object.getPrototypeOf(vue).constructor as Vue2Instance;
+    let vue2Constructor = Object.getPrototypeOf(vueInstance).constructor as Vue2Instance;
     while (vue2Constructor.super) {
       vue2Constructor = vue2Constructor.super;
     }
+    vueVersion = vue2Constructor.version
     vue2Constructor.config.devtools = true;
     devtools.emit('init', vue2Constructor);
+  }
+  return {
+    vueVersion
   }
 };
