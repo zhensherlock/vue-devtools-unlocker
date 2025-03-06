@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🤔 Ask a question（提问和讨论）
+    url: https://github.com/zhensherlock/vue-devtools-unlocker/discussions
+    about: Ask questions and discuss with other community members（提出问题并与其他社区成员讨论）
