@@ -23,9 +23,7 @@
     "default_title": "Vue Devtools Unlocker",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "storage"
-  ],
+  "permissions": [],
   "content_scripts": [
     {
       "matches": [
