@@ -12,7 +12,7 @@
     "lint:fix": "eslint --ext .ts,.js src/ --fix"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.307",
+    "@types/chrome": "^0.0.308",
     "@typescript-eslint/parser": "^8.26.0",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^10.2.4",
