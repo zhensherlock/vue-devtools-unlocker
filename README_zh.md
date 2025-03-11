@@ -2,6 +2,16 @@
   <img src="public/icons/icon_128.png" width="128">
 </p>
 
+<div align="center">
+
+[![][chrome-web-store-version]][chrome-web-store-link]
+[![][chrome-web-store-size]][chrome-web-store-link]
+[![][chrome-web-store-last-updated]][chrome-web-store-link]
+[![][github-action-build-shield]][github-action-build-link]
+[![][github-license-shield]][github-license-link]
+
+</div>
+
 # Vue DevTools Unlocker
 > 一个能够在生产环境中启用 Vue DevTools 的 Chrome 扩展。
 
@@ -13,7 +23,9 @@
 
 ## 安装
 
-[**Chrome** 扩展商店]() <!-- TODO: 在括号内添加 Chrome 扩展链接 -->
+[**Chrome** 扩展商店](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
+
+[//]: # ([**Edge** 扩展商店]&#40;https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa&#41;)
 
 ## 使用方法
 
@@ -52,3 +64,12 @@
 ## 使用许可
 
 [MIT](LICENSE) © MichaelSun
+
+[chrome-web-store-link]: https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa
+[chrome-web-store-version]: https://img.shields.io/chrome-web-store/v/fbihgkimpchlnlcnbffhbpcghafemopa?color=1677FF&labelColor=black&logo=chromewebstore&logoColor=white&style=flat-square
+[chrome-web-store-size]: https://img.shields.io/chrome-web-store/size/fbihgkimpchlnlcnbffhbpcghafemopa?color=1677FF&labelColor=black&logo=chromewebstore&logoColor=white&style=flat-square
+[chrome-web-store-last-updated]: https://img.shields.io/chrome-web-store/last-updated/fbihgkimpchlnlcnbffhbpcghafemopa?color=1677FF&labelColor=black&logo=chromewebstore&logoColor=white&style=flat-square
+[github-action-build-link]: https://github.com/zhensherlock/vue-devtools-unlocker/actions/workflows/build.yml
+[github-action-build-shield]: https://img.shields.io/github/actions/workflow/status/zhensherlock/vue-devtools-unlocker/build.yml?branch=main&color=1677FF&label=build&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-license-link]: https://github.com/zhensherlock/vue-devtools-unlocker/blob/main/LICENSE
+[github-license-shield]: https://img.shields.io/github/license/zhensherlock/vue-devtools-unlocker?color=1677FF&labelColor=black&style=flat-square
