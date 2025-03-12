@@ -13,7 +13,7 @@ export const injectScriptFile = (filePath: string) => {
 
 export const getVueInstanceWithRetry = async (
   version: number,
-  maxRetries: number = 10,
+  maxRetries: number = 2,
   interval: number = 1000
 ): Promise<VueInstance | undefined> => {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
@@ -31,6 +31,25 @@ export const getVueInstanceWithRetry = async (
   return undefined;
 };
 
+export const unlockPinia = (vueInstance: VueInstance) => {
+  if (!vueInstance?.config?.globalProperties?.$pinia) {
+    return;
+  }
+  const pinia = vueInstance?.config?.globalProperties?.$pinia;
+  console.log(pinia);
+  // pinia.use(devtoolsPlugin);
+  // registerPiniaDevtools(vueInstance, pinia);
+};
+
+export const unlockRouter = (vueInstance: VueInstance) => {
+  if (!vueInstance?.config?.globalProperties?.$router) {
+    return;
+  }
+  const router = vueInstance?.config?.globalProperties?.$router;
+  // addDevtools(router);
+  // console.log(router);
+};
+
 export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vueInstance: VueInstance) => {
   let vueVersion: string;
   if (version === 3) {
@@ -43,6 +62,8 @@ export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vu
       Comment: Symbol.for('v-cmt'),
       Static: Symbol.for('v-stc'),
     });
+    // unlockPinia(vueInstance);
+    // unlockRouter(vueInstance);
   } else {
     // Vue 2
     let vue2Constructor = Object.getPrototypeOf(vueInstance).constructor as Vue2Instance;
