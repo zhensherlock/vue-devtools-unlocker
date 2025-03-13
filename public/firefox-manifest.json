@@ -16,7 +16,7 @@
     }
   ],
   "background": {
-    "scripts": "background.js"
+    "scripts": ["background.js"]
   },
   "action": {
     "default_title": "Vue Devtools Unlocker",
