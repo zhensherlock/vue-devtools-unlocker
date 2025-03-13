@@ -1,6 +1,6 @@
 {
   "name": "@vue-devtools-unlocker/shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enable Vue DevTools in production environments",
   "author": "zhensherlock",
   "license": "MIT",

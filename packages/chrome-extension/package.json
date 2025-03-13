@@ -1,6 +1,6 @@
 {
   "name": "@vue-devtools-unlocker/chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enable Vue DevTools in production environments in Chrome browser",
   "scripts": {
     "clean": "rimraf build",
