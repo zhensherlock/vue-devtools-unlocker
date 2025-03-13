@@ -35,6 +35,7 @@
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.9.2",
     "prettier": "^3.5.3",
+    "terser-webpack-plugin": "^5.3.14",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.0",

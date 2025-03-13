@@ -38,6 +38,9 @@ importers:
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      terser-webpack-plugin:
+        specifier: ^5.3.14
+        version: 5.3.14(webpack@5.98.0)
       ts-loader:
         specifier: ^9.5.2
         version: 9.5.2(typescript@5.8.2)(webpack@5.98.0)
