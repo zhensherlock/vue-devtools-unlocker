@@ -13,9 +13,9 @@
     "build:shared": "pnpm -r --aggregate-output --filter=./packages/shared build",
     "build:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension build",
     "build:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension build",
-    "pack": "pnpm -r --aggregate-output --filter=./packages/* pack",
-    "pack:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension pack",
-    "pack:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension pack"
+    "pack": "pnpm -r --aggregate-output --filter=./packages/* build:zip",
+    "pack:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension build:zip",
+    "pack:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension build:zip"
   },
   "repository": {
     "type": "git",
