@@ -9,6 +9,12 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vue-devtools-unlocker@huayi-data.com",
+      "strict_min_version": "109.0"
+    }
+  },
   "web_accessible_resources": [
     {
       "resources": ["injectedScript.js"],
