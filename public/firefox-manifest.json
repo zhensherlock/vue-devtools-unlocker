@@ -1,13 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Vue Devtools Unlocker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enable Vue DevTools in production environments",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vue-devtools-unlocker@huayi-data.com",
+      "strict_min_version": "109.0"
+    }
   },
   "web_accessible_resources": [
     {
@@ -16,7 +22,7 @@
     }
   ],
   "background": {
-    "scripts": "background.js"
+    "scripts": ["background.js"]
   },
   "action": {
     "default_title": "Vue Devtools Unlocker",

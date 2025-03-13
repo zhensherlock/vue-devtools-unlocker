@@ -69,6 +69,12 @@ importers:
         specifier: workspace:^
         version: link:../shared
 
+  packages/firefox-extension:
+    dependencies:
+      '@vue-devtools-unlocker/shared':
+        specifier: workspace:^
+        version: link:../shared
+
   packages/shared: {}
 
 packages:

@@ -1,5 +1,6 @@
 'use strict';
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PATHS = require('./paths');
@@ -17,9 +18,6 @@ const common = {
     path: PATHS.build,
     // the filename template for entry chunks
     filename: '[name].js',
-    library: {
-      type: 'commonjs2',
-    },
   },
   stats: {
     all: false,
@@ -63,6 +61,23 @@ const common = {
     extensions: ['.ts', '.js'],
   },
   plugins: [
+    // Copy static assets from `public` folder to `build` folder
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'firefox-manifest.json',
+          to: 'manifest.json',
+          context: '../../public'
+        },
+        {
+          from: '**/*',
+          context: '../../public',
+          globOptions: {
+            ignore: ['**/firefox-manifest.json', '**/chrome-manifest.json']
+          }
+        },
+      ],
+    }),
     // Extract CSS into separate files
     new MiniCssExtractPlugin({
       filename: '[name].css',
