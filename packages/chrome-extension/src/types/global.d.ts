@@ -1,31 +1,8 @@
-interface Window {
-  __VUE_DEVTOOLS_GLOBAL_HOOK__: VueDevtoolsHook;
-  __VUE__: boolean;
-}
+import type { VueDevtoolsHook } from '@vue-devtools-unlocker/shared';
 
-interface VueDevtoolsHook {
-  enabled?: boolean;
-  emit: (event: string, ...args: unknown[]) => void;
+declare global {
+  interface Window {
+    __VUE_DEVTOOLS_GLOBAL_HOOK__: VueDevtoolsHook;
+    __VUE__: boolean;
+  }
 }
-
-interface Vue2Instance {
-  super?: Vue2Instance;
-  version: string;
-  config: {
-    devtools: boolean;
-    globalProperties: {
-      $pinia?: {
-        use: Function;
-      };
-      $router?: {
-        use: Function;
-      };
-    }
-  };
-}
-
-interface Vue3Instance {
-  version: string;
-}
-
-interface VueInstance extends Vue2Instance, Vue3Instance {}

@@ -1,3 +1,5 @@
+import type { Vue2Instance, VueDevtoolsHook, VueInstance } from '@/types';
+
 const getVueInstance = (version: number): VueInstance | undefined => {
   const vueKey = version === 2 ? '__vue__' : '__vue_app__';
   const elements = Array.from(document.querySelectorAll<HTMLElement & Record<string, unknown>>('*'));
