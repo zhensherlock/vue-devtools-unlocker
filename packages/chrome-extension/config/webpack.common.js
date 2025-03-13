@@ -65,8 +65,16 @@ const common = {
     new CopyWebpackPlugin({
       patterns: [
         {
+          from: 'chrome-manifest.json',
+          to: 'manifest.json',
+          context: '../../public'
+        },
+        {
           from: '**/*',
-          context: 'public',
+          context: '../../public',
+          globOptions: {
+            ignore: ['**/firefox-manifest.json', '**/chrome-manifest.json']
+          }
         },
       ],
     }),
