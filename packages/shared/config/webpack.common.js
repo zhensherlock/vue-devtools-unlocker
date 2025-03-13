@@ -17,6 +17,9 @@ const common = {
     path: PATHS.build,
     // the filename template for entry chunks
     filename: '[name].js',
+    library: {
+      type: 'commonjs2',
+    },
   },
   stats: {
     all: false,
