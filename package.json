@@ -2,14 +2,27 @@
   "name": "vue-devtools-unlocker",
   "version": "1.0.0",
   "description": "Enable Vue DevTools in production environments",
+  "author": "zhensherlock",
+  "license": "MIT",
   "scripts": {
-    "watch": "webpack --mode=development --watch --config config/webpack.config.js",
-    "build": "webpack --mode=production --config config/webpack.config.js",
-    "pack": "node pack.js",
-    "repack": "npm run build && npm run pack",
-    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\"",
-    "lint": "eslint --ext .ts,.js src/",
-    "lint:fix": "eslint --ext .ts,.js src/ --fix"
+    "dev": "pnpm -r --aggregate-output --filter=./packages/* watch",
+    "dev:shared": "pnpm -r --aggregate-output --filter=./packages/shared watch",
+    "dev:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension watch",
+    "dev:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension watch",
+    "build": "pnpm -r --aggregate-output --filter=./packages/* build",
+    "build:shared": "pnpm -r --aggregate-output --filter=./packages/shared build",
+    "build:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension build",
+    "build:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension build",
+    "pack": "pnpm -r --aggregate-output --filter=./packages/* pack",
+    "pack:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension pack",
+    "pack:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhensherlock/vue-devtools-unlocker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhensherlock/vue-devtools-unlocker/issues"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.308",
@@ -28,5 +41,8 @@
     "webpack": "^5.98.0",
     "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.10.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }

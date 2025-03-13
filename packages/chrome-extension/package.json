@@ -1,0 +1,24 @@
+{
+  "name": "@vue-devtools-unlocker/chrome-extension",
+  "version": "1.0.0",
+  "description": "Enable Vue DevTools in production environments in Chrome browser",
+  "scripts": {
+    "watch": "webpack --mode=development --watch --config config/webpack.config.js",
+    "build": "webpack --mode=production --config config/webpack.config.js",
+    "pack": "node pack.js",
+    "repack": "npm run build && npm run pack",
+    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\"",
+    "lint": "eslint --ext .ts,.js src/",
+    "lint:fix": "eslint --ext .ts,.js src/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhensherlock/vue-devtools-unlocker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhensherlock/vue-devtools-unlocker/issues"
+  },
+  "dependencies": {
+    "@vue-devtools-unlocker/shared": "workspace:^"
+  }
+}

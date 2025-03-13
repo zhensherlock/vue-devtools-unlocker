@@ -1,4 +1,4 @@
-import { getVueInstanceWithRetry, unlockVueDevTools } from '@/utils';
+import { getVueInstanceWithRetry, unlockVueDevTools } from '@vue-devtools-unlocker/shared';
 
 const devtools = window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
 
