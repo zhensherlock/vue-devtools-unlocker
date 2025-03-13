@@ -19,17 +19,25 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 22
+
+      - name: Install PNPM
+        run: npm i pnpm@latest -g
+
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
+      - name: setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
       - name: Install Package
-        run: npm ci
+        run: pnpm install
 
       - name: Build Package
-        run: npm run build
+        run: pnpm build
 
 #      - name: Test Package
-#        run: npm run test
+#        run: pnpm run test
 
       - name: Pack Extension
-        run: npm run pack
+        run: pnpm run pack

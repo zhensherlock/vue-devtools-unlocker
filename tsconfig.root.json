@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
+    "baseUrl": "./",
     "target": "es6",
     "module": "commonjs",
     "esModuleInterop": true,
@@ -9,5 +9,6 @@
       "@/*": ["./src/*"],
     },
     "typeRoots": ["./node_modules/@types", "./src/types"]
-  }
+  },
+  "exclude": []
 }

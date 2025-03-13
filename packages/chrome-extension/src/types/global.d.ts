@@ -13,6 +13,14 @@ interface Vue2Instance {
   version: string;
   config: {
     devtools: boolean;
+    globalProperties: {
+      $pinia?: {
+        use: Function;
+      };
+      $router?: {
+        use: Function;
+      };
+    }
   };
 }
 
