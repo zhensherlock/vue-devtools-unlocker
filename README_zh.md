@@ -25,7 +25,9 @@
 
 [**Chrome** 扩展商店](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
 
-[//]: # ([**Edge** 扩展商店]&#40;https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa&#41;)
+[**Edge** 扩展商店](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+
+[**Firefox** 扩展商店](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
 
 ## 使用方法
 
