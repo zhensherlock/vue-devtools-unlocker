@@ -29,7 +29,9 @@
 
 [**Chrome** extension](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
 
-[//]: # ([**Edge** extension]&#40;https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa&#41;)
+[**Edge** extension](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+
+[**Firefox** extension](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
 
 ## Usage
 
