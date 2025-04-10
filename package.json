@@ -28,7 +28,7 @@
     "@types/chrome": "^0.0.313",
     "@typescript-eslint/parser": "^8.26.0",
     "adm-zip": "^0.5.16",
-    "copy-webpack-plugin": "^10.2.4",
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^6.11.0",
     "eslint": "^9.21.0",
     "eslint-plugin-prettier": "^5.2.3",
