@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "^8.26.0",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^10.2.4",
-    "css-loader": "^6.11.0",
+    "css-loader": "^7.0.0",
     "eslint": "^9.21.0",
     "eslint-plugin-prettier": "^5.2.3",
     "file-loader": "^6.2.0",
