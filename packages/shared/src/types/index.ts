@@ -10,12 +10,12 @@ export interface Vue2Instance {
     devtools: boolean;
     globalProperties: {
       $pinia?: {
-        use: Function;
+        use: () => void;
       };
       $router?: {
-        use: Function;
+        use: () => void;
       };
-    }
+    };
   };
 }
 

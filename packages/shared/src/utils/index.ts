@@ -56,7 +56,7 @@ export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vu
   let vueVersion: string;
   if (version === 3) {
     // Vue 3
-    vueVersion = vueInstance.version
+    vueVersion = vueInstance.version;
     devtools.enabled = true;
     devtools.emit('app:init', vueInstance, vueVersion, {
       Fragment: Symbol.for('v-fgt'),
@@ -72,11 +72,11 @@ export const unlockVueDevTools = (devtools: VueDevtoolsHook, version: number, vu
     while (vue2Constructor.super) {
       vue2Constructor = vue2Constructor.super;
     }
-    vueVersion = vue2Constructor.version
+    vueVersion = vue2Constructor.version;
     vue2Constructor.config.devtools = true;
     devtools.emit('init', vue2Constructor);
   }
   return {
-    vueVersion
-  }
+    vueVersion,
+  };
 };

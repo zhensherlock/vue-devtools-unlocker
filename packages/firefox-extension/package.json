@@ -2,6 +2,7 @@
   "name": "@vue-devtools-unlocker/firefox-extension",
   "version": "1.0.1",
   "description": "Enable Vue DevTools in production environments in Firefox browser",
+  "type": "module",
   "scripts": {
     "clean": "rimraf build",
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
