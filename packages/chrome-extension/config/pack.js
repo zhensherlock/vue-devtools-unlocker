@@ -10,7 +10,7 @@ try {
   const { version, name } = JSON.parse(readFileSync(resolve(__dirname, '../build', 'manifest.json'), 'utf8'));
 
   const outdir = 'release';
-  const filename = `${name}-v${version}.zip`;
+  const filename = `${name}-chrome-v${version}.zip`;
   const zip = new AdmZip();
   zip.addLocalFolder('build');
   if (!existsSync(outdir)) {
