@@ -1,6 +1,4 @@
-'use strict';
-
-import './popup.css';
+import '@/popup.css';
 
 (function () {
   // Connect to background script

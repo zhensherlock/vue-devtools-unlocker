@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    if: github.repository == 'zhensherlock/vue-devtools-unlocker'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Version from Release Tag
+        run: echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install PNPM
+        run: npm i pnpm@latest -g
+
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
+      - name: setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+
+      - name: Install Package
+        run: pnpm install
+
+      - name: Build Package
+        run: pnpm build
+
+      - name: Pack Extension
+        run: pnpm run pack
+
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh
+
+      - name: Upload Chrome Extension
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ env.VERSION }}
+        run: gh release upload ${{ github.event.release.tag_name }} packages/chrome-extension/release/Vue Devtools Unlocker-chrome-${{ env.VERSION }}.zip --repo ${{ github.repository }}
+
+      - name: Upload Firefox Extension
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ env.VERSION }}
+        run: gh release upload ${{ github.event.release.tag_name }} packages/firefox-extension/release/Vue Devtools Unlocker-firefox-${{ env.VERSION }}.zip --repo ${{ github.repository }}

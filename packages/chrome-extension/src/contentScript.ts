@@ -1,5 +1,3 @@
-'use strict';
-
 import { injectScriptFile } from '@vue-devtools-unlocker/shared';
 
 injectScriptFile('injectedScript.js');

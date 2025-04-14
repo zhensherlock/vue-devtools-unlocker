@@ -1,5 +1,3 @@
-'use strict';
-
 // Store Vue DevTools unlock status for each tab
 const tabStatus: Record<number, unknown> = {};
 
@@ -25,8 +23,8 @@ chrome.runtime.onConnect.addListener((port) => {
           type: 'VueDevtoolsStatus',
           payload: tabStatus[tabId] || {
             success: false,
-            message: 'No Vue application detected or DevTools not unlocked on this page'
-          }
+            message: 'No Vue application detected or DevTools not unlocked on this page',
+          },
         });
       }
     });

@@ -3,11 +3,14 @@ import { getVueInstanceWithRetry, unlockVueDevTools } from '@vue-devtools-unlock
 const devtools = window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
 
 const postMessageToExtension = (type: string = 'VueDevtoolsMessage', payload: unknown) => {
-  window.postMessage({
-    source: 'vue-devtools-unlocker',
-    type,
-    payload,
-  }, '*');
+  window.postMessage(
+    {
+      source: 'vue-devtools-unlocker',
+      type,
+      payload,
+    },
+    '*'
+  );
 };
 
 if (devtools) {
@@ -31,6 +34,6 @@ if (devtools) {
 } else {
   postMessageToExtension('VueDevtoolsStatus', {
     success: false,
-    message: 'Vue DevTools not found.'
+    message: 'Vue DevTools not found.',
   });
 }

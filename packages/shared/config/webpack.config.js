@@ -1,10 +1,7 @@
-'use strict';
-
-const TerserPlugin = require('terser-webpack-plugin');
-const { merge } = require('webpack-merge');
-
-const common = require('./webpack.common.js');
-const PATHS = require('./paths');
+import TerserPlugin from 'terser-webpack-plugin';
+import { merge } from 'webpack-merge';
+import common from './webpack.common.js';
+import PATHS from './paths.js';
 
 // Merge webpack configuration files
 const config = (env, argv) => {
@@ -16,15 +13,17 @@ const config = (env, argv) => {
     devtool: isProduction ? false : 'source-map',
     optimization: {
       minimize: isProduction,
-      minimizer: [new TerserPlugin({
-        terserOptions: {
-          compress: {
-            drop_console: true,
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true,
+            },
           },
-        },
-      })],
+        }),
+      ],
     },
   });
 };
 
-module.exports = config;
+export default config;

@@ -1,9 +1,7 @@
-'use strict';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const PATHS = require('./paths');
+import PATHS from './paths.js';
 
 // used in the module rules and in the stats exlude list
 const IMAGE_TYPES = /\.(png|jpe?g|gif|svg)$/i;
@@ -67,14 +65,14 @@ const common = {
         {
           from: 'chrome-manifest.json',
           to: 'manifest.json',
-          context: '../../public'
+          context: '../../public',
         },
         {
           from: '**/*',
           context: '../../public',
           globOptions: {
-            ignore: ['**/firefox-manifest.json', '**/chrome-manifest.json']
-          }
+            ignore: ['**/firefox-manifest.json', '**/chrome-manifest.json'],
+          },
         },
       ],
     }),
@@ -85,4 +83,4 @@ const common = {
   ],
 };
 
-module.exports = common;
+export default common;
