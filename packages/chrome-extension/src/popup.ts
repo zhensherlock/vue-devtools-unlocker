@@ -12,31 +12,29 @@ import '@/popup.css';
       const statusElement = document.getElementById('status');
       if (statusElement) {
         if (data.success) {
+          statusElement.className = 'status-container status-success';
           statusElement.innerHTML = `
           <div>
-            Vue DevTools unlocked successfully.<br>
-            Vue Version: ${data.vueVersion}
+            <h3 style="margin-bottom: 8px; color: var(--success-color);">✅ Unlocked Successfully</h3>
+            <p>Vue DevTools has been successfully unlocked!</p>
+            <p style="margin-top: 8px;">
+              Vue Version: <span class="version-tag">${data.vueVersion || 'Unknown'}</span>
+            </p>
           </div>
         `;
         } else {
+          statusElement.className = 'status-container status-error';
           statusElement.innerHTML = `
           <div>
-            Vue DevTools unlock failed: ${data.message || 'Unknown error'}
+            <h3 style="margin-bottom: 8px; color: var(--error-color);">❌ Unlock Failed</h3>
+            <p>${data.message || 'Unknown error'}</p>
+            <p style="margin-top: 8px; font-size: 12px; color: #666;">
+              Please make sure the current page is running a Vue application
+            </p>
           </div>
         `;
         }
       }
     }
   });
-  // You can add a refresh button to let users manually refresh the status
-  // const refreshButton = document.getElementById('refreshStatus');
-  // if (refreshButton) {
-  //   refreshButton.addEventListener('click', () => {
-  //     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-  //       if (tabs[0] && tabs[0].id) {
-  //         chrome.tabs.sendMessage(tabs[0].id, { type: 'CheckVueDevtools' });
-  //       }
-  //     });
-  //   });
-  // }
 })();
