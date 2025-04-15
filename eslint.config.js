@@ -9,6 +9,11 @@ export default [
     ignores: ['node_modules/**', 'build/**', 'release/**', '**/*.json', '**/*.html', '**/*.css'],
   },
 
+  {
+    files: ['packages/shared/**/*.{js,ts}'],
+    ignore: ['config/**/*.{js,ts}'],
+  },
+
   // 全局配置
   {
     files: ['packages/**/*.{js,ts}'],

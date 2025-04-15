@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-import PATHS from './paths.js';
+const PATHS = require('./paths');
 
 // used in the module rules and in the stats exlude list
 const IMAGE_TYPES = /\.(png|jpe?g|gif|svg)$/i;
@@ -15,6 +15,7 @@ const common = {
     path: PATHS.build,
     // the filename template for entry chunks
     filename: '[name].js',
+    clean: true,
     library: {
       type: 'commonjs2',
     },
@@ -68,4 +69,4 @@ const common = {
   ],
 };
 
-export default common;
+module.exports = common;
