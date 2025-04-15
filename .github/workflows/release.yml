@@ -8,6 +8,8 @@ jobs:
   build:
     if: github.repository == 'zhensherlock/vue-devtools-unlocker'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Set Version from Release Tag
         run: echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
