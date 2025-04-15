@@ -47,10 +47,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ env.VERSION }}
-        run: gh release upload ${{ github.event.release.tag_name }} packages/chrome-extension/release/Vue Devtools Unlocker-chrome-${{ env.VERSION }}.zip --repo ${{ github.repository }}
+        run: gh release upload ${{ github.event.release.tag_name }} "packages/chrome-extension/release/Vue Devtools Unlocker-chrome-${{ env.VERSION }}.zip" --repo ${{ github.repository }}
 
       - name: Upload Firefox Extension
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ env.VERSION }}
-        run: gh release upload ${{ github.event.release.tag_name }} packages/firefox-extension/release/Vue Devtools Unlocker-firefox-${{ env.VERSION }}.zip --repo ${{ github.repository }}
+        run: gh release upload ${{ github.event.release.tag_name }} "packages/firefox-extension/release/Vue Devtools Unlocker-firefox-${{ env.VERSION }}.zip" --repo ${{ github.repository }}
