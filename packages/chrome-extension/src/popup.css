@@ -37,8 +37,8 @@ body {
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: white;
+  color: var(--secondary-color);
   border-bottom: 1px solid var(--border-color);
 }
 
