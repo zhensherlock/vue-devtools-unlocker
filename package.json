@@ -36,6 +36,8 @@
     "mini-css-extract-plugin": "^2.9.2",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
+    "sass": "^1.87.0",
+    "sass-loader": "^16.0.5",
     "terser-webpack-plugin": "^5.3.14",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",

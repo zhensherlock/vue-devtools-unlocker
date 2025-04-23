@@ -1,4 +1,4 @@
-import '@/popup.css';
+import '@/popup.scss';
 
 (function () {
   // Connect to background script
@@ -35,6 +35,16 @@ import '@/popup.css';
         `;
         }
       }
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const settingsButton = document.getElementById('openSettings');
+    if (settingsButton) {
+      settingsButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        chrome.runtime.openOptionsPage();
+      });
     }
   });
 })();

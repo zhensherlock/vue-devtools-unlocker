@@ -1,4 +1,4 @@
-import '@/popup.css';
+import '@/popup.scss';
 
 (function () {
   // Connect to background script
