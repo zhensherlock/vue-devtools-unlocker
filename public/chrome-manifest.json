@@ -19,11 +19,18 @@
   "background": {
     "service_worker": "background.js"
   },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "action": {
     "default_title": "Vue Devtools Unlocker",
     "default_popup": "popup.html"
   },
-  "permissions": [],
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": [

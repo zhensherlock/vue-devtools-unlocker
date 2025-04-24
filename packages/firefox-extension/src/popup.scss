@@ -25,11 +25,10 @@ body {
   color: var(--text-color);
 }
 
-.app {
+.container {
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
-  min-height: 200px;
   overflow: hidden;
 }
 
@@ -65,14 +64,26 @@ main {
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border-color);
+
+    h3 {
+      margin-bottom: 8px;
+    }
   }
 
   .status-success {
     border-left: 4px solid var(--success-color);
+
+    h3 {
+      color: var(--success-color);
+    }
   }
 
   .status-error {
     border-left: 4px solid var(--error-color);
+
+    h3 {
+      color: var(--error-color);
+    }
   }
 
   .loading {
@@ -81,14 +92,29 @@ main {
     gap: 10px;
   }
 
-  .version-tag {
-    display: inline-block;
-    padding: 2px 6px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 4px;
+  .version-info {
+    margin-top: 8px;
+
+    .version-tag {
+      display: inline-block;
+      padding: 2px 6px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+  }
+
+  .guide-text {
+    margin-top: 8px;
     font-size: 12px;
-    margin-left: 6px;
+    color: #666;
+  }
+
+  .guide-steps {
+    margin-top: 4px;
+    padding-left: 20px;
   }
 
   .spinner {
@@ -112,8 +138,11 @@ footer {
   text-align: center;
   font-size: 12px;
   border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 
-  .github-link {
+  .github-link, .settings-link {
     color: var(--secondary-color);
     text-decoration: none;
     display: inline-flex;
@@ -121,7 +150,7 @@ footer {
     gap: 4px;
   }
 
-  .github-link:hover {
+  .github-link:hover, .settings-link:hover {
     text-decoration: underline;
   }
 }
