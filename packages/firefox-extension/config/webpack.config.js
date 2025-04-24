@@ -12,6 +12,7 @@ const config = (env, argv) => {
       contentScript: PATHS.src + '/contentScript.ts',
       background: PATHS.src + '/background.ts',
       injectedScript: PATHS.src + '/injectedScript.ts',
+      options: PATHS.src + '/options.ts',
     },
     devtool: isProduction ? false : 'source-map',
     optimization: {

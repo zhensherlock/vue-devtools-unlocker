@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #42b883;
+  --secondary-color: #35495e;
+  --background-color: #f8f8f8;
+  --text-color: #2c3e50;
+  --border-color: #e0e0e0;
+  --success-color: #42b883;
+  --error-color: #ff5252;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+body {
+  width: 300px;
+  color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: white;
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+
+  h1 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+
+  .status-container {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+
+    h3 {
+      margin-bottom: 8px;
+    }
+  }
+
+  .status-success {
+    border-left: 4px solid var(--success-color);
+
+    h3 {
+      color: var(--success-color);
+    }
+  }
+
+  .status-error {
+    border-left: 4px solid var(--error-color);
+
+    h3 {
+      color: var(--error-color);
+    }
+  }
+
+  .loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .version-info {
+    margin-top: 8px;
+
+    .version-tag {
+      display: inline-block;
+      padding: 2px 6px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+  }
+
+  .guide-text {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .guide-steps {
+    margin-top: 4px;
+    padding-left: 20px;
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(66, 184, 131, 0.2);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+footer {
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  .github-link, .settings-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .github-link:hover, .settings-link:hover {
+    text-decoration: underline;
+  }
+}

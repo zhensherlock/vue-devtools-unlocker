@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue Devtools Unlocker Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Settings</h1>
+    </header>
+    <main>
+      <label for="allowedSites">Allowed Sites</label>
+      <textarea id="allowedSites" placeholder="Enter URLs or patterns (one per line)"></textarea>
+      <p class="help-text">Enter the URLs or patterns where you want to enable Vue Devtools. Use * for wildcards. Example: *.example.com</p>
+    </main>
+    <footer>
+      <button id="save">Save Settings</button>
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

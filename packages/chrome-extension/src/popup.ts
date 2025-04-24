@@ -1,4 +1,4 @@
-import '@/popup.css';
+import '@/popup.scss';
 
 (function () {
   // Connect to background script
@@ -10,31 +10,60 @@ import '@/popup.css';
       const data = message.payload;
 
       const statusElement = document.getElementById('status');
-      if (statusElement) {
-        if (data.success) {
-          statusElement.className = 'status-container status-success';
-          statusElement.innerHTML = `
+      if (!statusElement) {
+        return;
+      }
+      if (data.loading) {
+        statusElement.className = 'status-container';
+        statusElement.innerHTML = `
+          <div class="loading">
+            <div class="spinner"></div>
+            <span>Checking Vue DevTools status...</span>
+          </div>`;
+        return;
+      }
+      if (data.success) {
+        statusElement.className = 'status-container status-success';
+        statusElement.innerHTML = `
           <div>
-            <h3 style="margin-bottom: 8px; color: var(--success-color);">✅ Unlocked Successfully</h3>
+            <h3>✅ Unlocked Successfully</h3>
             <p>Vue DevTools has been successfully unlocked!</p>
-            <p style="margin-top: 8px;">
+            <p class="version-info">
               Vue Version: <span class="version-tag">${data.vueVersion || 'Unknown'}</span>
             </p>
-          </div>
-        `;
-        } else {
-          statusElement.className = 'status-container status-error';
-          statusElement.innerHTML = `
+          </div>`;
+      } else {
+        statusElement.className = 'status-container status-error';
+        statusElement.innerHTML = `
           <div>
-            <h3 style="margin-bottom: 8px; color: var(--error-color);">❌ Unlock Failed</h3>
+            <h3>❌ Unlock Failed</h3>
             <p>${data.message || 'Unknown error'}</p>
-            <p style="margin-top: 8px; font-size: 12px; color: #666;">
-              Please make sure the current page is running a Vue application
-            </p>
+            ${
+              data.isNotAllowed
+                ? `
+            <p class="guide-text">
+              To enable Vue DevTools on this page:
+              <ol class="guide-steps">
+                <li>Click the "Settings" button below</li>
+                <li>Add this website to the allowed sites list</li>
+                <li>Refresh this page</li>
+              </ol>
+            </p>`
+                : ''
+            }
           </div>
         `;
-        }
       }
     }
   });
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const settingsButton = document.getElementById('openSettings');
+  if (settingsButton) {
+    settingsButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      chrome.runtime.openOptionsPage();
+    });
+  }
+});

@@ -33,6 +33,53 @@ export const getVueInstanceWithRetry = async (
   return undefined;
 };
 
+export const getAllowedSites = (callback: (text: string) => void) => {
+  chrome.storage.sync.get('allowedSites', (result) => {
+    if (result.allowedSites) {
+      const text = (result.allowedSites?.join('\n') || '') as string;
+      callback(text);
+    }
+  });
+};
+
+export const setAllowedSites = (allowedSites: string [], callback: () => void) => {
+  chrome.storage.sync.set({ allowedSites }, () => {
+    callback();
+  });
+};
+
+export const checkAllowedStatus = (tabId: number, url: string) => {
+  chrome.storage.sync.get({ allowedSites: [] }, (data) => {
+    const allowedSites = data.allowedSites as string[];
+    console.log(allowedSites);
+    const isAllowed = isUrlAllowed(url, allowedSites);
+    console.log(isAllowed);
+
+    chrome.tabs.sendMessage(tabId, { type: 'CheckIsAllowed', isAllowed });
+  });
+};
+
+export const isUrlAllowed = (url: string, allowedDomains: string[]) => {
+  if (!allowedDomains || allowedDomains.length === 0) {
+    return true;
+  }
+
+  try {
+    const hostname = new URL(url).hostname;
+
+    return allowedDomains.some((domainPattern) => {
+      if (domainPattern.startsWith('*.')) {
+        const baseDomain = domainPattern.substring(2);
+        return hostname === baseDomain || hostname.endsWith('.' + baseDomain);
+      }
+      return hostname === domainPattern;
+    });
+  } catch {
+    console.error('Invalid URL:', url);
+    return false;
+  }
+};
+
 export const unlockPinia = (vueInstance: VueInstance) => {
   if (!vueInstance?.config?.globalProperties?.$pinia) {
     return;
