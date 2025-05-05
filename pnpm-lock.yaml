@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@types/chrome':
-        specifier: ^0.0.318
-        version: 0.0.318
+        specifier: ^0.0.320
+        version: 0.0.320
       '@typescript-eslint/parser':
         specifier: ^8.29.1
         version: 8.31.1(eslint@9.26.0)(typescript@5.8.3)
@@ -274,8 +274,8 @@ packages:
     resolution: {integrity: sha512-vsJDAkYR6qCPu+ioGScGiMYR7LvZYIXh/dlQeviqoTWNCVfKTLYD/LkNWH4Mxsv2a5vpIRc77FN5DnmK1eBggQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@types/chrome@0.0.318':
-    resolution: {integrity: sha512-rrtyYQ1t+g7EyG0FejE+UXQBjSGUHGh0RIdXwUT/laPo9T724NOIgXA94ns6ewmNauwijYa5ck3+dBxWnHcynQ==}
+  '@types/chrome@0.0.320':
+    resolution: {integrity: sha512-LD0O6hqayM4/InMUB2fOGSh7lFkUlusa40mk6iUAxs0RHfvRYjjsDoRGsDh2DEJWP4Ckccf00FVhkhDHHIqy7g==}
 
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
@@ -1863,7 +1863,7 @@ snapshots:
 
   '@pkgr/core@0.2.0': {}
 
-  '@types/chrome@0.0.318':
+  '@types/chrome@0.0.320':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
