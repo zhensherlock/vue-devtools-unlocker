@@ -25,7 +25,7 @@
     "url": "https://github.com/zhensherlock/vue-devtools-unlocker/issues"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.321",
+    "@types/chrome": "^0.0.322",
     "@typescript-eslint/parser": "^8.29.1",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^13.0.0",
