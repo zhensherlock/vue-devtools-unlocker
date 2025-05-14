@@ -55,7 +55,7 @@ export const checkAllowedStatus = (tabId: number, url: string) => {
     const isAllowed = isUrlAllowed(url, allowedSites);
     console.log(isAllowed);
 
-    chrome.tabs.sendMessage(tabId, { type: 'CheckIsAllowed', isAllowed });
+    chrome.tabs.sendMessage(tabId, { type: 'CheckIsAllowed', isAllowed }).catch(() => {});
   });
 };
 
