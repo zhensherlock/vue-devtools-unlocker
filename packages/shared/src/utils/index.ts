@@ -42,7 +42,7 @@ export const getAllowedSites = (callback: (text: string) => void) => {
   });
 };
 
-export const setAllowedSites = (allowedSites: string [], callback: () => void) => {
+export const setAllowedSites = (allowedSites: string[], callback: () => void) => {
   chrome.storage.sync.set({ allowedSites }, () => {
     callback();
   });
@@ -55,7 +55,7 @@ export const checkAllowedStatus = (tabId: number, url: string) => {
     const isAllowed = isUrlAllowed(url, allowedSites);
     console.log(isAllowed);
 
-    chrome.tabs.sendMessage(tabId, { type: 'CheckIsAllowed', isAllowed });
+    chrome.tabs.sendMessage(tabId, { type: 'CheckIsAllowed', isAllowed }).catch(() => {});
   });
 };
 
