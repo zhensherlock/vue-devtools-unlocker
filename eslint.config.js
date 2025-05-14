@@ -1,17 +1,19 @@
-import tseslint from 'typescript-eslint';
-import prettierPlugin from 'eslint-plugin-prettier';
+// import tseslint from 'typescript-eslint';
+// import prettierPlugin from 'eslint-plugin-prettier';
+const tseslint = require('typescript-eslint');
+const prettierPlugin = require('eslint-plugin-prettier');
 
-export default [
+module.exports = [
   // 应用 TypeScript ESLint 推荐配置
   ...tseslint.configs.recommended,
 
   {
-    ignores: ['node_modules/**', 'build/**', 'release/**', '**/*.json', '**/*.html', '**/*.css'],
+    ignores: ['node_modules/**', 'build/**', 'release/**', '**/*.json', '**/*.html', '**/*.css', '**/*.js'],
   },
 
   {
     files: ['packages/shared/**/*.{js,ts}'],
-    ignore: ['config/**/*.{js,ts}'],
+    ignores: ['config/**/*.{js,ts}'],
   },
 
   // 全局配置

@@ -42,7 +42,7 @@ export const getAllowedSites = (callback: (text: string) => void) => {
   });
 };
 
-export const setAllowedSites = (allowedSites: string [], callback: () => void) => {
+export const setAllowedSites = (allowedSites: string[], callback: () => void) => {
   chrome.storage.sync.set({ allowedSites }, () => {
     callback();
   });
