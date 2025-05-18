@@ -28,7 +28,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@types/chrome": "^0.0.322",
+    "@types/chrome": "^0.0.323",
     "@typescript-eslint/parser": "^8.32.1",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^13.0.0",
