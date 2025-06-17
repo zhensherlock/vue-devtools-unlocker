@@ -34,7 +34,7 @@ importers:
         version: 9.29.0(jiti@2.4.2)
       eslint-plugin-prettier:
         specifier: ^5.4.0
-        version: 5.4.1(@types/eslint@9.6.1)(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)
+        version: 5.5.0(@types/eslint@9.6.1)(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)
       file-loader:
         specifier: ^6.2.0
         version: 6.2.0(webpack@5.99.9)
@@ -364,8 +364,8 @@ packages:
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
 
-  '@pkgr/core@0.2.4':
-    resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
+  '@pkgr/core@0.2.7':
+    resolution: {integrity: sha512-YLT9Zo3oNPJoBjBc4q8G2mjU4tqIbf5CEOORbUUr48dCD9q3umJ3IPlVqOqDakPfd2HuwccBaqlGhN4Gmr5OWg==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
   '@types/chrome@0.0.326':
@@ -808,8 +808,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-prettier@5.4.1:
-    resolution: {integrity: sha512-9dF+KuU/Ilkq27A8idRP7N2DH8iUR6qXcjF3FR2wETY21PZdBrIjwCau8oboyGj9b7etWmTGEeM8e7oOed6ZWg==}
+  eslint-plugin-prettier@5.5.0:
+    resolution: {integrity: sha512-8qsOYwkkGrahrgoUv76NZi23koqXOGiiEzXMrT8Q7VcYaUISR+5MorIUxfWqYXN0fN/31WbSrxCxFkVQ43wwrA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
@@ -2037,7 +2037,7 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.5.1
     optional: true
 
-  '@pkgr/core@0.2.4': {}
+  '@pkgr/core@0.2.7': {}
 
   '@types/chrome@0.0.326':
     dependencies:
@@ -2498,7 +2498,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-prettier@5.4.1(@types/eslint@9.6.1)(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3):
+  eslint-plugin-prettier@5.5.0(@types/eslint@9.6.1)(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3):
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
       prettier: 3.5.3
@@ -3161,7 +3161,7 @@ snapshots:
 
   synckit@0.11.8:
     dependencies:
-      '@pkgr/core': 0.2.4
+      '@pkgr/core': 0.2.7
 
   tapable@2.2.1: {}
 
