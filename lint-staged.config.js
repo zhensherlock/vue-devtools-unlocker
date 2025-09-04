@@ -1,3 +1,3 @@
-module.exports = {
+export default {
   'packages/**/*.{ts,js}': ['npx eslint'],
 }
