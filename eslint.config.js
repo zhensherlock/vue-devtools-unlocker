@@ -1,10 +1,11 @@
-// import tseslint from 'typescript-eslint';
-// import prettierPlugin from 'eslint-plugin-prettier';
-const tseslint = require('typescript-eslint');
-const prettierPlugin = require('eslint-plugin-prettier');
+import tsParser from '@typescript-eslint/parser'
+import tseslint from 'typescript-eslint';
+import tsPlugin from '@typescript-eslint/eslint-plugin'
+import importPlugin from 'eslint-plugin-import'
+import prettierPlugin from 'eslint-plugin-prettier';
+import globals from 'globals'
 
-module.exports = [
-  // 应用 TypeScript ESLint 推荐配置
+export default [
   ...tseslint.configs.recommended,
 
   {
@@ -16,24 +17,20 @@ module.exports = [
     ignores: ['config/**/*.{js,ts}'],
   },
 
-  // 全局配置
   {
     files: ['packages/**/*.{js,ts}'],
 
     languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
+      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 'latest',
         sourceType: 'module',
       },
       globals: {
-        // 浏览器环境
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        // Chrome 扩展 API
-        chrome: 'readonly',
+        ...globals.es2022,
+        ...globals.node,
+        ...globals.browser,
+        ...globals.devtools,
       },
     },
 
@@ -46,6 +43,8 @@ module.exports = [
     },
 
     plugins: {
+      '@typescript-eslint': tsPlugin,
+      import: importPlugin,
       prettier: prettierPlugin,
     },
   },
