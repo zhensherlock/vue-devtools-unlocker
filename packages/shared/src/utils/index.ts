@@ -36,7 +36,7 @@ export const getVueInstanceWithRetry = async (
 export const getAllowedSites = (callback: (text: string) => void) => {
   chrome.storage.sync.get('allowedSites', (result) => {
     if (result.allowedSites) {
-      const text = (result.allowedSites?.join('\n') || '') as string;
+      const text = (result.allowedSites as string[])?.join('\n') || '';
       callback(text);
     }
   });
