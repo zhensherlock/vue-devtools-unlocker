@@ -22,4 +22,4 @@ export default {
     ],
     'subject-case': [0],
   },
-}
+};

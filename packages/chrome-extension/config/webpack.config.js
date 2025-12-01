@@ -1,7 +1,7 @@
 import TerserPlugin from 'terser-webpack-plugin';
 import { merge } from 'webpack-merge';
-import common from './webpack.common.js';
 import PATHS from './paths.js';
+import common from './webpack.common.js';
 
 // Merge webpack configuration files
 const config = (env, argv) => {

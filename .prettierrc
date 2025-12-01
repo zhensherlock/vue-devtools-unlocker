@@ -7,5 +7,6 @@
   "arrowParens": "always",
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
+  "endOfLine": "lf",
   "semi": true
 }

@@ -8,7 +8,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'VueDevtoolsStatus' && sender.tab?.id) {
     // Store unlock status for current tab
     tabStatus[sender.tab.id] = message.payload;
-    console.log(tabStatus);
     sendResponse({ success: true });
   }
 });

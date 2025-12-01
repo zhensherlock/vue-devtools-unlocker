@@ -36,7 +36,7 @@ export const getVueInstanceWithRetry = async (
 export const getAllowedSites = (callback: (text: string) => void) => {
   chrome.storage.sync.get('allowedSites', (result) => {
     if (result.allowedSites) {
-      const text = (result.allowedSites?.join('\n') || '') as string;
+      const text = (result.allowedSites as string[])?.join('\n') || '';
       callback(text);
     }
   });
@@ -51,9 +51,7 @@ export const setAllowedSites = (allowedSites: string[], callback: () => void) =>
 export const checkAllowedStatus = (tabId: number, url: string) => {
   chrome.storage.sync.get({ allowedSites: [] }, (data) => {
     const allowedSites = data.allowedSites as string[];
-    console.log(allowedSites);
     const isAllowed = isUrlAllowed(url, allowedSites);
-    console.log(isAllowed);
 
     chrome.tabs.sendMessage(tabId, { type: 'CheckIsAllowed', isAllowed }).catch(() => {});
   });
@@ -84,8 +82,8 @@ export const unlockPinia = (vueInstance: VueInstance) => {
   if (!vueInstance?.config?.globalProperties?.$pinia) {
     return;
   }
-  const pinia = vueInstance?.config?.globalProperties?.$pinia;
-  console.log(pinia);
+  // const pinia = vueInstance?.config?.globalProperties?.$pinia;
+  // console.log(pinia);
   // pinia.use(devtoolsPlugin);
   // registerPiniaDevtools(vueInstance, pinia);
 };
@@ -94,7 +92,7 @@ export const unlockRouter = (vueInstance: VueInstance) => {
   if (!vueInstance?.config?.globalProperties?.$router) {
     return;
   }
-  const router = vueInstance?.config?.globalProperties?.$router;
+  // const router = vueInstance?.config?.globalProperties?.$router;
   // addDevtools(router);
   // console.log(router);
 };

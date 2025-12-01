@@ -1,6 +1,6 @@
-import { readFileSync, existsSync, mkdirSync } from 'fs';
-import { dirname, resolve } from 'path';
 import AdmZip from 'adm-zip';
+import { existsSync, mkdirSync, readFileSync } from 'fs';
+import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
