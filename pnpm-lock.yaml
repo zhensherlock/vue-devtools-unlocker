@@ -20,12 +20,6 @@ importers:
       '@types/chrome':
         specifier: ^0.1.32
         version: 0.1.32
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.48.1
-        version: 8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3))(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
-      '@typescript-eslint/parser':
-        specifier: ^8.48.1
-        version: 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
       adm-zip:
         specifier: ^0.5.16
         version: 0.5.16

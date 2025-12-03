@@ -31,8 +31,6 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@types/chrome": "^0.1.32",
-    "@typescript-eslint/eslint-plugin": "^8.48.1",
-    "@typescript-eslint/parser": "^8.48.1",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
