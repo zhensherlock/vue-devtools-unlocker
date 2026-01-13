@@ -19,7 +19,7 @@ importers:
         version: 20.3.1
       '@types/chrome':
         specifier: ^0.1.32
-        version: 0.1.32
+        version: 0.1.33
       adm-zip:
         specifier: ^0.5.16
         version: 0.5.16
@@ -407,8 +407,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@types/chrome@0.1.32':
-    resolution: {integrity: sha512-n5Cqlh7zyAqRLQWLXkeV5K/1BgDZdVcO/dJSTa8x+7w+sx7m73UrDmduAptg4KorMtyTW2TNnPu8RGeaDMKNGg==}
+  '@types/chrome@0.1.33':
+    resolution: {integrity: sha512-hSwcseKjWilz8bq93kLyIfSTvFLypRbO5iRhSXdJyVFFMV9aeqIjisBI6P/0J5+FiIKMo2NejyhHXfQLN0c0tQ==}
 
   '@types/conventional-commits-parser@5.0.2':
     resolution: {integrity: sha512-BgT2szDXnVypgpNxOK8aL5SGjUdaQbC++WZNjF1Qge3Og2+zhHj+RWhmehLhYyvQwqAmvezruVfOf8+3m74W+g==}
@@ -2498,7 +2498,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@types/chrome@0.1.32':
+  '@types/chrome@0.1.33':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
