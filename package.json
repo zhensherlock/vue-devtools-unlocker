@@ -27,7 +27,7 @@
     "url": "https://github.com/zhensherlock/vue-devtools-unlocker/issues"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.3",
+    "@biomejs/biome": "2.4.4",
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
     "@types/chrome": "^0.1.36",
