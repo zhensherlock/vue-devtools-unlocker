@@ -62,7 +62,7 @@ jobs:
           npm-token: ${{ secrets.NPM_TOKEN }}
 
       - name: Build Docs Package
-        run: pnpm run build
+        run: pnpm run build:docs
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v4
