@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+permissions: write-all
+
 jobs:
   build:
     if: github.repository == 'zhensherlock/vue-devtools-unlocker'
