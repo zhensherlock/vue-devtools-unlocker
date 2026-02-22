@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "pnpm -r --aggregate-output --filter=./packages/* watch",
+    "dev:docs": "pnpm -r --aggregate-output --filter=./apps/docs dev",
     "dev:shared": "pnpm -r --aggregate-output --filter=./packages/shared watch",
     "dev:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension watch",
     "dev:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension watch",
@@ -14,6 +15,7 @@
     "build:shared": "pnpm -r --aggregate-output --filter=./packages/shared build",
     "build:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension build",
     "build:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension build",
+    "build:docs": "pnpm -r --aggregate-output --filter=./apps/docs build",
     "pack": "pnpm -r --aggregate-output --filter=./packages/* build:zip",
     "pack:chrome": "pnpm -r --aggregate-output --filter=./packages/chrome-extension build:zip",
     "pack:firefox": "pnpm -r --aggregate-output --filter=./packages/firefox-extension build:zip",
@@ -27,14 +29,14 @@
     "url": "https://github.com/zhensherlock/vue-devtools-unlocker/issues"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.3",
+    "@biomejs/biome": "2.4.4",
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
-    "@types/chrome": "^0.1.36",
+    "@types/chrome": "^0.1.37",
     "adm-zip": "^0.5.16",
     "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.4",
-    "eslint": "^10.0.0",
+    "eslint": "^10.0.1",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.5",
     "file-loader": "^6.2.0",

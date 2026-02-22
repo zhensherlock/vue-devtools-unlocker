@@ -27,11 +27,11 @@
 
 ## Install
 
-[**Chrome** extension](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
+[Chrome Web Store](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
 
-[**Edge** extension](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
 
-[**Firefox** extension](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
+[Firefox Add-ons](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
 
 ## Usage
 

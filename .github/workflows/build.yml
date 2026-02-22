@@ -44,3 +44,36 @@ jobs:
 #          verbose: true
 #        env:
 #          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  doc:
+    if: github.repository == 'zhensherlock/vue-devtools-unlocker'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: 22
+          npm-token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build Docs Package
+        run: pnpm run build
+
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: apps/docs/.vitepress/dist
+
+      - name: Get the content of algolia.json as config
+        id: algolia_config
+        run: echo "config=$(cat apps/docs/crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
+      - name: Push indices to Algolia
+        uses: signcl/docsearch-scraper-action@master
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
