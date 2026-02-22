@@ -15,3 +15,6 @@ npm-debug.log*
 release/
 
 .idea
+
+/apps/docs/.vitepress/cache/
+/apps/docs/.vitepress/dist/
