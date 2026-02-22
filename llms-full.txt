@@ -1,0 +1,157 @@
+---
+url: /vue-devtools-unlocker/guide/getting-started.md
+---
+
+# Getting Started
+
+This guide walks you through installing Vue DevTools Unlocker and using it to enable the Vue DevTools panel on production sites.
+
+## Install the extension
+
+Install the extension from your browser’s store:
+
+* [Chrome Web Store](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
+* [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+* [Firefox Add-ons](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
+
+After installation, the Vue DevTools Unlocker icon should appear in your browser toolbar.
+
+## Configure allowed sites
+
+By default, **Allowed Sites** is empty, which means Vue DevTools Unlocker can unlock Vue DevTools on all sites.
+
+If you want to limit where it runs, you can add specific hostnames or domain patterns.
+
+1. Click the Vue DevTools Unlocker icon in the toolbar.
+2. Click the **Settings** button in the popup.
+3. In **Allowed Sites**, enter the hostnames or patterns where you want to enable Vue DevTools, one per line. Leave it empty to allow all sites.
+4. You can use `*` as a wildcard, for example:
+   * `*.example.com`
+   * `app.your-domain.com`
+5. Click **Save Settings**.
+
+## Enable Vue DevTools on a page
+
+Once the extension is installed and the site is allowed:
+
+1. Open a page that uses Vue in production.
+2. Make sure the domain matches one of your **Allowed Sites** patterns.
+3. Refresh the page after changing the settings.
+4. Open your browser’s DevTools (for example, `F12` or “Inspect”).
+5. Switch to the **Vue** panel.
+
+If the page is running Vue and the extension successfully unlocked DevTools, the Vue panel will show the app tree and component state.
+
+## Browser support and limitations
+
+* Supports Vue 2 and Vue 3 applications.
+* Works in Chrome, Edge, and Firefox.
+* Some security‑sensitive pages (for example, certain browser internal pages) cannot be modified by extensions and therefore cannot be unlocked.
+
+---
+
+---
+url: /vue-devtools-unlocker/guide/what-is-it.md
+---
+
+# What is Vue DevTools Unlocker?
+
+Vue DevTools Unlocker is a browser extension that enables the Vue DevTools panel on production sites.
+
+By default, Vue DevTools is disabled in production builds. This extension injects a small script into the page to re-enable the Vue devtools hook so that your Vue app can be inspected just like in development.
+
+## Key Features
+
+* Unlocks the Vue DevTools panel on production pages.
+* Works with both Vue 2 and Vue 3.
+* Shows the detected Vue version in the extension popup.
+* No changes required to your application code or build config.
+* Simple browser extension workflow that fits into existing debugging habits.
+
+## Supported Browsers
+
+Vue DevTools Unlocker is available in the following browser stores:
+
+* [Chrome Web Store](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
+* [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+* [Firefox Add-ons](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
+
+---
+
+---
+url: /vue-devtools-unlocker/zh/guide/what-is-it.md
+---
+
+# 什么是 Vue DevTools Unlocker？
+
+Vue DevTools Unlocker 是一个浏览器扩展，用于在生产环境页面中启用 Vue DevTools 面板。
+
+在生产构建中，Vue 默认会关闭 DevTools。这个扩展会向页面注入一小段脚本，重新启用 Vue 的 devtools hook，让你的 Vue 应用在生产环境也能像开发环境一样被检查和调试。
+
+## 主要特性
+
+* 在生产环境页面解锁 Vue DevTools 面板。
+* 同时支持 Vue 2 和 Vue 3。
+* 在扩展弹窗中显示检测到的 Vue 版本。
+* 无需修改应用源码或构建配置。
+* 基于浏览器扩展的调试流程，贴合现有开发习惯。
+
+## 支持的浏览器
+
+Vue DevTools Unlocker 在以下浏览器扩展商店中提供：
+
+* [Chrome 扩展商店](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
+* [Microsoft Edge 扩展](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+* [Firefox 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
+
+---
+
+---
+url: /vue-devtools-unlocker/zh/guide/getting-started.md
+---
+
+# 入门指南
+
+本页将带你完成 Vue DevTools Unlocker 的安装与使用，在生产环境页面中启用 Vue DevTools 面板。
+
+## 安装扩展
+
+从浏览器扩展商店安装 Vue DevTools Unlocker：
+
+* [Chrome 扩展商店](https://chromewebstore.google.com/detail/vue-devtools-unlocker/fbihgkimpchlnlcnbffhbpcghafemopa)
+* [Edge 扩展商店](https://microsoftedge.microsoft.com/addons/detail/vue-devtools-unlocker/lehadmjlbmlapdkapjoapbhhbcpcoepd)
+* [Firefox 扩展商店](https://addons.mozilla.org/zh-CN/firefox/addon/vue-devtools-unlocker/)
+
+安装完成后，你应该能在浏览器工具栏中看到 Vue DevTools Unlocker 图标。
+
+## 配置允许站点
+
+默认情况下，**Allowed Sites（允许站点）** 为空，表示 Vue DevTools Unlocker 可以在所有站点上解锁 Vue DevTools。
+
+如果你希望限制生效范围，可以填写特定主机名或域名规则。
+
+1. 点击浏览器工具栏中的 Vue DevTools Unlocker 图标。
+2. 在弹出的面板中点击「Settings」按钮。
+3. 在 **Allowed Sites（允许站点）** 文本框中，一行一个地填写你希望启用 Vue DevTools 的主机名或规则。留空则表示所有站点均生效。
+4. 支持使用 `*` 通配符，例如：
+   * `*.example.com`
+   * `app.your-domain.com`
+5. 点击「Save Settings」保存设置。
+
+## 在页面上启用 Vue DevTools
+
+配置好允许站点后，在目标页面上启用 Vue DevTools 的步骤如下：
+
+1. 打开一个使用 Vue 的生产环境页面。
+2. 确认当前域名匹配你在 **Allowed Sites** 中配置的规则。
+3. 如果刚修改完设置，请刷新页面。
+4. 打开浏览器开发者工具（例如按下 `F12` 或右键选择「检查」）。
+5. 切换到 **Vue** 面板。
+
+如果页面确实在运行 Vue，且扩展已成功解锁 DevTools，你会在 Vue 面板中看到应用树和组件状态。
+
+## 浏览器支持与限制
+
+* 支持 Vue 2 与 Vue 3 应用。
+* 支持 Chrome、Edge 与 Firefox 浏览器。
+* 某些安全敏感页面（例如部分浏览器内部页面）不允许被扩展修改，因此无法被解锁。
