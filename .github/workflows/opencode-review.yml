@@ -18,10 +18,10 @@ jobs:
           persist-credentials: false
       - uses: anomalyco/opencode/github@github-v1.2.17
         env:
-          BAILIAN_CODING_PLAN_API_KEY: ${{ secrets.BAILIAN_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.BAILIAN_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: alibaba-coding-plan-cn/qwen3.5-plus
+          model: alibaba-cn/qwen3.5-plus
           use_github_token: true
           prompt: |
             Review this pull request:
