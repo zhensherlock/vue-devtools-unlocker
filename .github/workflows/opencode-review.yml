@@ -21,7 +21,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.BAILIAN_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: bailian/qwen3.5-plus
+          model: alibaba-cn/qwen3.5-plus
           use_github_token: true
           prompt: |
             Review this pull request:
