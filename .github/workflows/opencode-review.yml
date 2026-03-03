@@ -4,12 +4,22 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   review:
+    if: |
+      github.event.pull_request.author_association == 'MEMBER' ||
+      github.event.pull_request.author_association == 'OWNER' ||
+      github.event.pull_request.author_association == 'COLLABORATOR'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       id-token: write
       contents: read
+      actions: read
       pull-requests: write
       issues: write
     steps:
@@ -18,10 +28,10 @@ jobs:
           persist-credentials: false
       - uses: anomalyco/opencode/github@github-v1.2.17
         env:
-          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: minimax-cn/MiniMax-M2.1
+          model: opencode/minimax-m2.5-free
           use_github_token: true
           prompt: |
             Review this pull request:
