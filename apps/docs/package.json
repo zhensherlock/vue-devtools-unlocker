@@ -11,14 +11,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@tailwindcss/vite": "^4.2.0",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/lodash-es": "^4.17.12",
-    "tailwindcss": "^4.2.0",
-    "vitepress": "^2.0.0-alpha.16",
-    "vitepress-plugin-group-icons": "^1.7.1",
-    "vitepress-plugin-llms": "^1.11.0"
+    "tailwindcss": "^4.2.2",
+    "vitepress": "^2.0.0-alpha.17",
+    "vitepress-plugin-group-icons": "^1.7.3",
+    "vitepress-plugin-llms": "^1.12.0"
   },
   "dependencies": {
-    "lodash-es": "^4.17.23"
+    "lodash-es": "^4.18.1"
   }
 }
