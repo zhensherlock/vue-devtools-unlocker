@@ -35,7 +35,7 @@
     "@commitlint/config-conventional": "^20.5.0",
     "@types/chrome": "^0.1.39",
     "adm-zip": "^0.5.17",
-    "copy-webpack-plugin": "^13.0.1",
+    "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^7.1.4",
     "eslint": "^10.2.0",
     "eslint-plugin-import": "^2.32.0",
