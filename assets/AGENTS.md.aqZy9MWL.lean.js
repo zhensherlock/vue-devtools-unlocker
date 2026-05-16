@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as d,ak as i}from"./chunks/framework.6ZCauho6.js";const u=JSON.parse('{"title":"Agent Notes","description":"","frontmatter":{},"headers":[],"relativePath":"AGENTS.md","filePath":"AGENTS.md"}'),t={name:"AGENTS.md"};function a(c,e,n,r,l,p){return s(),d("div",null,[...e[0]||(e[0]=[i("",3)])])}const g=o(t,[["render",a]]);export{u as __pageData,g as default};

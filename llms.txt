@@ -21,3 +21,6 @@
 - [什么是 Vue DevTools Unlocker？](/vue-devtools-unlocker/zh/guide/what-is-it.md)
 - [入门指南](/vue-devtools-unlocker/zh/guide/getting-started.md)
 
+### Other
+
+- [Agent Notes](/vue-devtools-unlocker/AGENTS.md)
