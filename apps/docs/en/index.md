@@ -23,7 +23,7 @@ features:
   - title: Vue Version Insight
     icon: 📦
     details: Shows the detected Vue.js version so you can confirm what is running in production.
-  - title: Simple Browser Extension
-    icon: ⚙️
-    details: Install from the browser store and start debugging immediately, no extra setup required.
+  - title: Pinia State View
+    icon: 🍍
+    details: Shows Vue 3 Pinia stores and state when the runtime Pinia instance is available.
 ---

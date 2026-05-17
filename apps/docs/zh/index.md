@@ -23,7 +23,7 @@ features:
   - title: 显示 Vue 版本信息
     icon: 📦
     details: 在扩展中展示检测到的 Vue.js 版本，方便确认线上运行环境。
-  - title: 简单易用的浏览器扩展
-    icon: ⚙️
-    details: 从扩展商店安装后即可开始调试，无需额外配置。
+  - title: 查看 Pinia 状态
+    icon: 🍍
+    details: 当页面存在运行时 Pinia 实例时，可查看 Vue 3 Pinia stores 与 state。
 ---
