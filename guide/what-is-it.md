@@ -12,6 +12,7 @@ By default, Vue DevTools is disabled in production builds. This extension inject
 
 * Unlocks the Vue DevTools panel on production pages.
 * Works with both Vue 2 and Vue 3.
+* Shows Vue 3 Pinia stores and state when the runtime Pinia instance is available.
 * Shows the detected Vue version in the extension popup.
 * No changes required to your application code or build config.
 * Simple browser extension workflow that fits into existing debugging habits.

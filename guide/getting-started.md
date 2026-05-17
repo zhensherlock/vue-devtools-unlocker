@@ -42,8 +42,11 @@ Once the extension is installed and the site is allowed:
 
 If the page is running Vue and the extension successfully unlocked DevTools, the Vue panel will show the app tree and component state.
 
+For Vue 3 apps using Pinia, the extension can also unlock Pinia support so stores and state can be viewed in the Pinia inspector inside Vue DevTools when the runtime Pinia instance is available.
+
 ## Browser support and limitations
 
 * Supports Vue 2 and Vue 3 applications.
 * Works in Chrome, Edge, and Firefox.
+* Pinia support is unlocked for inspection inside Vue DevTools; full official Pinia Devtools features such as action grouping may depend on dev-only metadata.
 * Some security‑sensitive pages (for example, certain browser internal pages) cannot be modified by extensions and therefore cannot be unlocked.

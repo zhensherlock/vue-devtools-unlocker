@@ -42,8 +42,11 @@ url: /vue-devtools-unlocker/zh/guide/getting-started.md
 
 如果页面确实在运行 Vue，且扩展已成功解锁 DevTools，你会在 Vue 面板中看到应用树和组件状态。
 
+对于使用 Pinia 的 Vue 3 应用，如果页面中能拿到运行时 Pinia 实例，扩展也会解锁 Pinia 支持，你可以在 Vue DevTools 内的 Pinia inspector 中查看 stores 与 state。
+
 ## 浏览器支持与限制
 
 * 支持 Vue 2 与 Vue 3 应用。
 * 支持 Chrome、Edge 与 Firefox 浏览器。
+* Pinia 支持用于在 Vue DevTools 内解锁生产环境的 store/state 查看；action grouping 等完整官方 Pinia Devtools 能力可能依赖开发态元信息。
 * 某些安全敏感页面（例如部分浏览器内部页面）不允许被扩展修改，因此无法被解锁。
