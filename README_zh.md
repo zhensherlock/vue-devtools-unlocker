@@ -20,6 +20,7 @@
 - 🔑 在生产环境中解锁 Vue DevTools
 - 🌐 同时支持 Vue 2 和 Vue 3
 - 📦 显示 Vue 版本信息
+- 🍍 当页面存在运行时 Pinia 实例时，为 Vue 3 应用解锁 Pinia 支持
 
 ## 安装
 
@@ -36,6 +37,8 @@
 3. 打开 Chrome DevTools (F12 或右键点击 "检查")
 4. 在 DevTools 中查看 Vue 面板
 
+对于使用 Pinia 的 Vue 3 应用，扩展解锁支持后，可在 Vue DevTools 内的 Pinia inspector 中查看 stores 与 state。
+
 ## 工作原理
 
 该扩展通过修改 Vue 实例的配置，在运行时启用开发者工具，即使在生产环境中也能正常工作。
@@ -44,6 +47,7 @@
 
 - Chrome 88+
 - Vue.js 2.x 和 3.x
+- Vue 3 应用的 Pinia store/state 查看；完整官方 Pinia Devtools 能力可能依赖开发态元信息
 
 ## 维护者
 
