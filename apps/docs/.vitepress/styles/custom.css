@@ -1,12 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #DA3D20, #3D45AA);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #DA3D20 50%, #3D45AA 50%);
-  --vp-home-hero-image-filter: blur(44px);
-  --vp-home-hero-image-width: 480px;
-  --vp-home-hero-image-height: 320px;
+  --vdu-vue: oklch(0.68 0.16 158);
+  --vdu-vue-soft: oklch(0.92 0.04 158);
+  --vdu-panel: oklch(0.22 0.04 244);
+  --vdu-amber: oklch(0.77 0.16 74);
+  --vp-c-brand-1: oklch(0.48 0.13 158);
+  --vp-c-brand-2: oklch(0.56 0.15 158);
+  --vp-c-brand-3: oklch(0.62 0.16 158);
+  --vp-c-brand-soft: color-mix(in oklch, var(--vdu-vue) 14%, transparent);
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--vdu-vue) 54%, transparent),
+    color-mix(in oklch, var(--vdu-amber) 30%, transparent) 52%,
+    color-mix(in oklch, var(--vdu-panel) 34%, transparent)
+  );
+  --vp-home-hero-image-filter: blur(52px) saturate(1.1);
+}
+
+.dark {
+  --vp-c-brand-1: oklch(0.75 0.14 158);
+  --vp-c-brand-2: oklch(0.68 0.15 158);
+  --vp-c-brand-3: oklch(0.58 0.14 158);
+  --vp-c-brand-soft: color-mix(in oklch, var(--vdu-vue) 18%, transparent);
 }
 
 .VPHero:not(.has-image) .name {
@@ -17,18 +35,125 @@
   max-width: 100% !important;
 }
 
-.VPHomeHero .image-src {
-  border-radius: 18px;
-  box-shadow: 0 28px 80px rgba(27, 34, 53, 0.28);
+.VPHomeHero .image {
+  pointer-events: none;
+}
+
+.VPHomeHero .image-container {
+  isolation: isolate;
+  padding: clamp(10px, 1.5vw, 16px);
+  border: 1px solid color-mix(in oklch, var(--vp-c-brand-1) 22%, var(--vp-c-divider));
+  border-radius: 30px;
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in oklch, var(--vp-c-bg) 92%, var(--vdu-vue-soft) 8%),
+      color-mix(in oklch, var(--vp-c-bg) 78%, var(--vdu-panel) 22%)
+    ),
+    var(--vp-c-bg);
+  box-shadow:
+    0 30px 80px color-mix(in oklch, var(--vdu-panel) 22%, transparent),
+    0 10px 26px color-mix(in oklch, var(--vdu-vue) 10%, transparent),
+    inset 0 1px 0 color-mix(in oklch, var(--vp-c-bg) 86%, white 14%);
+  transform: none !important;
+}
+
+.dark .VPHomeHero .image-container {
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in oklch, var(--vp-c-bg) 72%, var(--vdu-vue) 28%),
+      color-mix(in oklch, var(--vp-c-bg) 58%, var(--vdu-panel) 42%)
+    ),
+    var(--vp-c-bg);
+  box-shadow:
+    0 34px 90px color-mix(in oklch, black 45%, transparent),
+    0 12px 34px color-mix(in oklch, var(--vdu-vue) 18%, transparent),
+    inset 0 1px 0 color-mix(in oklch, white 10%, transparent);
+}
+
+.VPHomeHero .image-container::after {
+  content: "";
+  position: absolute;
+  inset: clamp(10px, 1.5vw, 16px);
+  z-index: 2;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, white 24%, transparent);
+  pointer-events: none;
+}
+
+.dark .VPHomeHero .image-container::after {
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, white 14%, transparent);
+}
+
+.VPHomeHero .image-bg {
+  inset: -24px !important;
+  top: auto !important;
+  left: auto !important;
+  z-index: -1;
+  width: auto !important;
   height: auto !important;
+  border-radius: 36px;
+  opacity: 0.5;
+  transform: none !important;
+}
+
+.VPHomeHero .image-src {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  z-index: 1;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 48px color-mix(in oklch, var(--vdu-panel) 20%, transparent);
+  height: 100% !important;
   max-height: none !important;
-  max-width: 480px !important;
-  width: min(38vw, 480px) !important;
+  max-width: none !important;
+  object-fit: cover;
+  transform: none !important;
+  width: 100% !important;
+}
+
+@media (min-width: 960px) {
+  .VPHomeHero .image-container {
+    width: min(43vw, 540px) !important;
+    height: auto !important;
+    aspect-ratio: 3 / 2;
+  }
 }
 
 @media (max-width: 959px) {
+  .VPHomeHero .image {
+    margin-bottom: 18px;
+  }
+
+  .VPHomeHero .image-container {
+    width: min(84vw, 460px) !important;
+    height: auto !important;
+    aspect-ratio: 3 / 2;
+  }
+
   .VPHomeHero .image-src {
-    max-width: 420px !important;
-    width: min(84vw, 420px) !important;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 639px) {
+  .VPHomeHero .image-container {
+    width: min(88vw, 380px) !important;
+    border-radius: 24px;
+  }
+
+  .VPHomeHero .image-container::after {
+    border-radius: 16px;
+  }
+
+  .VPHomeHero .image-bg {
+    inset: -16px !important;
+    border-radius: 28px;
+  }
+
+  .VPHomeHero .image-src {
+    border-radius: 14px;
   }
 }
