@@ -1,6 +1,6 @@
 # Vue DevTools Unlocker
 
-> Enable Vue DevTools in production environments
+> Debug Vue apps in production, without touching the source code.
 
 - � Unlock Vue DevTools in production
 - 🌐 Works with both Vue 2 and Vue 3
