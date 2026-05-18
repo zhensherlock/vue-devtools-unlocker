@@ -24,6 +24,7 @@
 - 🔑 Unlocks Vue DevTools in production environments
 - 🌐 Works with both Vue 2 and Vue 3
 - 📦 Shows Vue version information
+- 🍍 Unlocks Pinia support for Vue 3 apps when the runtime Pinia instance is available
 
 ## Install
 
@@ -40,6 +41,8 @@
 3. Open Chrome DevTools (F12 or right-click "Inspect")
 4. Access the Vue panel in DevTools
 
+For Vue 3 apps using Pinia, open the Pinia inspector inside Vue DevTools to view stores and state after the extension unlocks support.
+
 ## How It Works
 
 This extension modifies the Vue instance configuration to enable developer tools at runtime, even in production environments.
@@ -48,6 +51,7 @@ This extension modifies the Vue instance configuration to enable developer tools
 
 - Chrome 88+
 - Vue.js 2.x and 3.x
+- Pinia store/state inspection for Vue 3 apps; full official Pinia Devtools features may depend on dev-only metadata
 
 ## Maintainers
 
