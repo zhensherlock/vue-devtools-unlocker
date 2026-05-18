@@ -11,7 +11,7 @@ const base = isGithubPages ? '/vue-devtools-unlocker/' : '/'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Vue DevTools Unlocker',
-  description: 'Enable Vue DevTools in production environments',
+  description: 'Debug Vue apps in production, without touching the source code.',
   rewrites: {
     'en/:rest*': ':rest*',
     'en/index.md': 'index.md',
@@ -90,7 +90,7 @@ export default defineConfig({
       tailwindcss(),
       llmstxt({
         ignoreFiles: ['en/index.md', 'zh/index.md'],
-        description: 'Enable Vue DevTools in production environments',
+        description: 'Debug Vue apps in production, without touching the source code.',
         sidebar: [
           {
             text: 'Introduction',

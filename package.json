@@ -1,7 +1,7 @@
 {
   "name": "vue-devtools-unlocker",
   "version": "1.0.0",
-  "description": "Enable Vue DevTools in production environments",
+  "description": "Debug Vue apps in production, without touching the source code.",
   "type": "module",
   "author": "zhensherlock",
   "license": "MIT",
