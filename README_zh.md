@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/icons/icon_128.png" width="128">
+  <img src="apps/docs/public/hero-unlocker.webp" width="700">
 </p>
 
 <div align="center">
