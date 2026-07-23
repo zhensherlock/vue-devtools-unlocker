@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/zhensherlock/vue-devtools-unlocker/issues"
   },
-  "packageManager": "pnpm@10.33.4",
+  "packageManager": "pnpm@11.17.0",
   "devDependencies": {
     "@biomejs/biome": "2.4.15",
     "@commitlint/cli": "^21.0.1",
