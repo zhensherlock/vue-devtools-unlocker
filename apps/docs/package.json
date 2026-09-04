@@ -14,7 +14,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/lodash-es": "^4.17.12",
     "tailwindcss": "^4.3.3",
-    "vitepress": "^2.0.0-alpha.19",
+    "vitepress": "^2.0.0-alpha.20",
     "vitepress-plugin-group-icons": "^1.7.6",
     "vitepress-plugin-llms": "^1.13.5"
   },
