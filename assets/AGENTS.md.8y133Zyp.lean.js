@@ -1,0 +1,1 @@
+import{G as e,K as t,at as n,n as r}from"./chunks/framework.BUqJv_MI.js";var i=JSON.parse(`{"title":"Agent Notes","description":"","frontmatter":{},"headers":[],"relativePath":"AGENTS.md","filePath":"AGENTS.md"}`),a={name:`AGENTS.md`};function o(r,i,a,o,s,c){return n(),e(`div`,null,[...i[0]||=[t("",3)]])}var s=r(a,[[`render`,o]]);export{i as __pageData,s as default};
