@@ -16,7 +16,7 @@
     "tailwindcss": "^4.3.3",
     "vitepress": "^2.0.0-alpha.20",
     "vitepress-plugin-group-icons": "^1.7.6",
-    "vitepress-plugin-llms": "^1.13.5"
+    "vitepress-plugin-llms": "^1.14.0"
   },
   "dependencies": {
     "lodash-es": "^4.18.1"
